@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Coursr</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Главная</string>
+    <string name="favorites">Избранное</string>
+    <string name="account">Аккаунт</string>
+    <string name="search_courses_text">Search courses...</string>
+    <string name="more_details">Подробнее</string>
+    <string name="price_rubles">%1$s ₽</string>
+    <string name="by_publish_date">По дате добавления</string>
+</resources>
