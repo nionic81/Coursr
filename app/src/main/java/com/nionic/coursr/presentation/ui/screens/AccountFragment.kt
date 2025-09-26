@@ -1,12 +1,12 @@
 package com.nionic.coursr.presentation.ui.screens
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.nionic.coursr.R
+import androidx.fragment.app.Fragment
 import com.nionic.coursr.databinding.FragmentAccountBinding
+import com.nionic.coursr.presentation.ui.MainActivity
 
 class AccountFragment : Fragment() {
 
@@ -18,7 +18,9 @@ class AccountFragment : Fragment() {
     ): View? {
         binding = FragmentAccountBinding.inflate(layoutInflater, container, false)
 
-
+        binding?.btLogout?.setOnClickListener {
+            (activity as MainActivity).logOut()
+        }
 
         return binding?.root
     }

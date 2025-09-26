@@ -3,10 +3,10 @@ package com.nionic.coursr.presentation.viewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.nionic.coursr.domain.model.Course
-import com.nionic.coursr.domain.useCase.CourseUseCase
-import com.nionic.coursr.domain.useCase.FavUseCase
-import com.nionic.coursr.domain.useCase.LoadCoursesUseCase
-import com.nionic.coursr.domain.useCase.ToggleFavUseCase
+import com.nionic.coursr.domain.useCase.courses.CourseUseCase
+import com.nionic.coursr.domain.useCase.courses.FavUseCase
+import com.nionic.coursr.domain.useCase.courses.LoadCoursesUseCase
+import com.nionic.coursr.domain.useCase.courses.ToggleFavUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -54,15 +54,11 @@ class CourseViewModel : ViewModel(), KoinComponent {
         )
 
     fun loadCourses() {
-        viewModelScope.launch {
-            loadCoursesUseCase()
-        }
+        viewModelScope.launch { loadCoursesUseCase() }
     }
 
     fun toggleFavCourses(courseId: Int) {
-        viewModelScope.launch {
-            toggleFavUseCase(courseId)
-        }
+        viewModelScope.launch { toggleFavUseCase(courseId) }
     }
 
     fun sortByPublishDate() {

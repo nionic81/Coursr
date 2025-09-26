@@ -76,4 +76,5 @@ dependencies {
     implementation(libs.okhttp3.logging)
     implementation(libs.okhttp3)
     implementation(libs.gson)
+    implementation(libs.preferences)
 }

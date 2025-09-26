@@ -10,7 +10,7 @@ material = "1.13.0"
 activity = "1.11.0"
 constraintlayout = "2.2.1"
 
-room = "2.8.0"
+room = "2.8.1"
 lifecycle = "2.9.4"
 coroutines = "1.10.2"
 koin = "4.1.1"
@@ -20,6 +20,7 @@ recyclerview = "1.4.0"
 retrofit = "3.0.0"
 okhttp3 = "5.1.0"
 gson = "2.13.2"
+preferences = "1.1.7"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -54,7 +55,9 @@ retrofit2 = { group = "com.squareup.retrofit2", name = "retrofit", version.ref =
 retrofit2-converter = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
 okhttp3-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp3" }
 okhttp3 = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp3" }
-gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson"}
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+
+preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "preferences" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

@@ -1,4 +1,4 @@
-package com.nionic.coursr.domain.useCase
+package com.nionic.coursr.domain.useCase.courses
 
 import com.nionic.coursr.domain.repository.CourseRepository
 
