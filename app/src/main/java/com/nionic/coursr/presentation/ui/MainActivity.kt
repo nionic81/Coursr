@@ -34,16 +34,13 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
                 finish()
                 return@launch
             }
+            binding = ActivityMainBinding.inflate(layoutInflater)
+            setContentView(binding?.root)
+            setupLoadingCourses()
+            loadFragment(this@MainActivity, CoursesFragment(), R.id.contentLayout)
+            binding?.bottomNav?.selectedItemId = R.id.bmHome
+            binding?.bottomNav?.setOnItemSelectedListener(this@MainActivity)
         }
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding?.root)
-
-        setupLoadingCourses()
-
-        loadFragment(this, CoursesFragment(), R.id.contentLayout)
-
-        binding?.bottomNav?.selectedItemId = R.id.bmHome
-        binding?.bottomNav?.setOnItemSelectedListener(this)
     }
 
     private fun setupLoadingCourses() {
