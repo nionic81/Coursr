@@ -193,6 +193,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_vk_button"
                 android:backgroundTint="@color/vk_color"
+                android:contentDescription="vk_button"
                 android:src="@drawable/vk_logo" />
 
             <ImageButton
@@ -202,6 +203,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_ok_button"
+                android:contentDescription="ok_button"
                 android:src="@drawable/ok_logo" />
         </LinearLayout>
 
