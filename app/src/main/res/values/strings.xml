@@ -9,4 +9,12 @@
     <string name="more_details">Подробнее</string>
     <string name="price_rubles">%1$s ₽</string>
     <string name="by_publish_date">По дате добавления</string>
+    <string name="enter">Вход</string>
+    <string name="email">Email</string>
+    <string name="email_example">example@gmail.com</string>
+    <string name="password">Пароль</string>
+    <string name="enter_password">Введите пароль</string>
+    <string name="do_you_have_no_account">Нету аккаунта?</string>
+    <string name="sign_up">Регитрация</string>
+    <string name="forgot_password">Забыл пароль</string>
 </resources>

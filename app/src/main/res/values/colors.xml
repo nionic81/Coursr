@@ -8,4 +8,8 @@
     <color name="stroke">#4D555E</color>
     <color name="dark">#151515</color>
     <color name="semi_transparent_gray">#4D32333A</color>
+    <color name="vk_color">#2683ED</color>
+    <color name="ok_start_color">#F98509</color>
+    <color name="ok_end_color">#F95D00</color>
+    <color name="input_layout_color">#32333A</color>
 </resources>
