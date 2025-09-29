@@ -14,20 +14,27 @@ private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(na
 class AuthManager(context: Context) {
 
     private val dataStore = context.dataStore
-    private val EMAIL_KEY = stringPreferencesKey("email")
+    private val emailKey = stringPreferencesKey("email")
+    private val passwordKey = stringPreferencesKey("password")
+
     val userEmail: Flow<String?> = dataStore.data.map { prefs ->
-        prefs[EMAIL_KEY]
+        prefs[emailKey]
+    }
+    val isLoggedIn: Flow<Boolean> = dataStore.data.map { prefs ->
+        prefs[emailKey] != null && prefs[passwordKey] != null
     }
 
-    suspend fun saveEmail(email: String) {
+    suspend fun saveCredential(email: String, password: String) {
         dataStore.edit { prefs ->
-            prefs[EMAIL_KEY] = email
+            prefs[emailKey] = email
+            prefs[passwordKey] = password
         }
     }
 
-    suspend fun clearEmail() {
+    suspend fun clearCredential() {
         dataStore.edit { prefs ->
-            prefs.remove(EMAIL_KEY)
+            prefs.remove(emailKey)
+            prefs.remove(passwordKey)
         }
     }
 }

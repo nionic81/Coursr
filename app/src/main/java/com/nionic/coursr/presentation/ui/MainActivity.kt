@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
 
     fun logOut() {
         lifecycleScope.launch {
-            authManager.clearEmail()
+            authManager.clearCredential()
             startActivity(Intent(this@MainActivity, LoginActivity::class.java))
             finish()
         }

@@ -17,4 +17,9 @@
     <string name="do_you_have_no_account">Нету аккаунта?</string>
     <string name="sign_up">Регитрация</string>
     <string name="forgot_password">Забыл пароль</string>
+    <string name="email_is_incorrect">Некорректный email</string>
+    <string name="password_is_over_six">Пароль должен содержать не менее 6 символов</string>
+    <string name="email_is_too_short">Email слишком короткий</string>
+    <string name="logout">Выход</string>
+    <string name="user_email">Вы вошли с помощью email:\n%1$s</string>
 </resources>
