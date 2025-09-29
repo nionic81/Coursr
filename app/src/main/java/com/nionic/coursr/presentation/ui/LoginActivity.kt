@@ -6,9 +6,12 @@ import android.text.Editable
 import android.text.InputFilter
 import android.text.TextWatcher
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.net.toUri
 import androidx.lifecycle.lifecycleScope
+import com.nionic.coursr.OK_URL
 import com.nionic.coursr.R
 import com.nionic.coursr.RUS_LETTERS
+import com.nionic.coursr.VK_URL
 import com.nionic.coursr.data.local.AuthManager
 import com.nionic.coursr.databinding.ActivityLoginBinding
 import kotlinx.coroutines.launch
@@ -28,6 +31,8 @@ class LoginActivity : AppCompatActivity() {
         binding?.etEnterEmail?.addTextChangedListener(getTextWatcher())
         binding?.etEnterPassword?.addTextChangedListener(getTextWatcher())
         binding?.btLogin?.setOnClickListener { login() }
+        binding?.btVK?.setOnClickListener { linkIntent(VK_URL) }
+        binding?.btOK?.setOnClickListener { linkIntent(OK_URL) }
         updateLoginButtonState()
     }
 
@@ -99,5 +104,10 @@ class LoginActivity : AppCompatActivity() {
         val isPasswordValid = binding?.etEnterPassword?.text.toString().length >= 6
         binding?.btLogin?.isEnabled = isEmailValid && isPasswordValid
         binding?.btLogin?.alpha = if (binding?.btLogin?.isEnabled == true) 1.0f else 0.5f
+    }
+
+    private fun linkIntent(url: String) {
+        val intent = Intent(Intent.ACTION_VIEW, url.toUri())
+        startActivity(intent)
     }
 }
